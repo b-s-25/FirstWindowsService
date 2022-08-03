@@ -1,4 +1,5 @@
-﻿using LINQtoCSV;
+﻿using CsvHelper.Configuration.Attributes;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,21 +11,21 @@ namespace WindowsService
     [Serializable]
    public  class Details
     {
-        [CsvColumn(Name = "employeID", FieldIndex = 1)]
+        [Name("employeID")]
         public string EmployeId { get; set; }
-        [CsvColumn(Name = "displayName", FieldIndex = 2)]
+        [Name("displayName")]
         public string DisplayName { get; set; }
-        [CsvColumn(Name = "giveName", FieldIndex = 3)]
+        [Name("giveName")]
         public string GiveName { get; set; }
-        [CsvColumn(Name = "sn", FieldIndex = 4)]
+        [Name("sn")]
         public string SN { get; set; }
-        [CsvColumn(Name = "department", FieldIndex = 5)]
+        [Name("department")]
         public string Department { get; set; }
-        [CsvColumn(Name = "mail", FieldIndex = 6)]
+        [Name("mail")]
         public string Email { get; set; }
-        [CsvColumn(Name = "title", FieldIndex = 7)]
+        [Name("title")]
         public string Title { get; set; }
-        [CsvColumn(Name = "manager", FieldIndex = 8)]
+        [Name("manager")]
         public string Manager { get; set; }
 
     }

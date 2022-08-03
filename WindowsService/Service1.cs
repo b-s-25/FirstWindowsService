@@ -74,7 +74,7 @@ namespace WindowsService
             details.Add(new Details() { EmployeId = "X04125", DisplayName = "Aaron Wagoner", GiveName = "Aaron", SN = "Wagoner", Department = "Customer Operations", Email = "aaron.wagoner@interfacesys.com", Title = "Project Manager", Manager = "Christina Heilig" });
             details.Add(new Details() { EmployeId = "I02168", DisplayName = "Aaron Wright", GiveName = "Aaron", SN = "Wright", Department = "Security Operations Center (SOC)", Email = "Aaron.Wright@interfacesys.com", Title = "Network Engineer", Manager = "Dallas Helquist" });
 
-            using (var writer = new StreamWriter("Getuserdetails.csv"))
+            using (var writer = new StreamWriter("Getuserdetail.csv"))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
                 csv.WriteRecords(details);
